@@ -16,8 +16,8 @@ Instead of scrutinizing all the functions present inside main application that m
 4) See how __function_in_so_which_calls_connect__ when called from main application does not call connect of main, instead calls wrapper __\_\_wrap_connect\_\___ function.
    
 # How to compile code:
-1) __For creating dynamic library__.
+1) __For creating dynamic library__.<br>
   gcc -ggdb -O0 -shared -Wl,-wrap,connect -o libtest.so -fPIC connect.c
   
-2) __For creating main executable__ (assuming libtest.so is at /home/user/work)
+2) __For creating main executable__ (assuming libtest.so is at /home/user/work)<br>
   gcc -g -O0 main.c -L/home/user/work -ltest -o mainapp
