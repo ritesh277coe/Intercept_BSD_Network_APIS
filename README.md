@@ -1,6 +1,9 @@
 # Intercept_BSD_Network_APIS
 A sample project to demonstrate how to intercept BSD network calls in C/Cpp program on Linux platform.
 
+# Possible usecase:
+Instead of scrutinizing all the functions present inside main application that make network connection, its preferrable to have one place for all network level checks.
+
 # Project Requirements:
 1) All the BSD network calls made through main application should be intercepted.
 2) All the network calls inside the Dynamic Library SHOULD NOT be intercepted by the hook defined in main application.
